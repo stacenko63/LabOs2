@@ -42,6 +42,7 @@ int main() {
 	double a = 0, b = 0, result = 0;
 	cout << "ÃËÀÂÍÛÉ ÏĞÎÖÅÑÑ: ÍÀ×ÀËÎ ĞÀÁÎÒÛ ÃËÀÂÍÎÃÎ ÏĞÎÖÅÑÑÀ\n";
 	cout << "Ââåäèòå çíà÷åíèå ïåğåìåííîé a: ";
+
 	input_correctly_number(a);
 	Limitations(1, a);
 	cout << "Ââåäèòå çíà÷åíèå ïåğåìåííîé b: ";
