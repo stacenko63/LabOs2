@@ -16,6 +16,7 @@ double get_value(HANDLE m2, HANDLE m, HANDLE s2, const string& message) {
 	return atof(buffer);
 }
 
+
 template<typename T>
 void input_correctly_number(T& aa)
 {
