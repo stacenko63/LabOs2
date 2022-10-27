@@ -7,6 +7,7 @@ using namespace std;
 
 
 
+
 int main() {
 
 	setlocale(LC_ALL, "RUS");
@@ -19,17 +20,17 @@ int main() {
 	while (true) {
 
 		WaitForSingleObject(s, INFINITE);
-		cout << "ÏÐÎÖÅÑÑ 3: ÈÇÂËÅ×ÅÍÈÅ ÊÂÀÄÐÀÒÍÎÃÎ ÊÎÐÍß ÍÀ×ÀË ÐÀÁÎÒÓ\n";
+		cout << "ÃÃÃŽÃ–Ã…Ã‘Ã‘ 3: ÃˆÃ‡Ã‚Ã‹Ã…Ã—Ã…ÃÃˆÃ… ÃŠÃ‚Ã€Ã„ÃÃ€Ã’ÃÃŽÃƒÃŽ ÃŠÃŽÃÃÃŸ ÃÃ€Ã—Ã€Ã‹ ÃÃ€ÃÃŽÃ’Ã“\n";
 		ReadFile(m, &buffer, BUFLEN, &n, NULL);
 		
-		cout << "ÏÐÎÖÅÑÑ 3: ÈÇ ÏÎËÓ×ÅÍÍÎÃÎ ×ÈÑËÀ ÈÇ ÃËÀÂÍÎÃÎ ÏÐÎÖÅÑÑÀ ÈÇÂËÅÊÀÅÒ ÊÎÐÅÍÜ\n";
+		cout << "ÃÃÃŽÃ–Ã…Ã‘Ã‘ 3: ÃˆÃ‡ ÃÃŽÃ‹Ã“Ã—Ã…ÃÃÃŽÃƒÃŽ Ã—ÃˆÃ‘Ã‹Ã€ ÃˆÃ‡ ÃƒÃ‹Ã€Ã‚ÃÃŽÃƒÃŽ ÃÃÃŽÃ–Ã…Ã‘Ã‘Ã€ ÃˆÃ‡Ã‚Ã‹Ã…ÃŠÃ€Ã…Ã’ ÃŠÃŽÃÃ…ÃÃœ\n";
 		double tmp = atof(buffer);
 		tmp = sqrt(tmp);
-		cout << "ÏÐÎÖÅÑÑ 3: ÐÅÇÓËÜÒÀÒ ÈÇÂËÅ×ÅÍÈß ÊÂÀÄÐÀÒÍÎÃÎ ÊÎÐÍß: " << tmp << "\n";
+		cout << "ÃÃÃŽÃ–Ã…Ã‘Ã‘ 3: ÃÃ…Ã‡Ã“Ã‹ÃœÃ’Ã€Ã’ ÃˆÃ‡Ã‚Ã‹Ã…Ã—Ã…ÃÃˆÃŸ ÃŠÃ‚Ã€Ã„ÃÃ€Ã’ÃÃŽÃƒÃŽ ÃŠÃŽÃÃÃŸ: " << tmp << "\n";
 
 		HANDLE m2 = CreateFile(L"\\\\.\\mailslot\\myslot", GENERIC_WRITE, FILE_SHARE_READ, NULL, OPEN_EXISTING,
 			FILE_ATTRIBUTE_NORMAL, 0);
-		cout << "ÏÐÎÖÅÑÑ 3: ÎÁÐÀÁÎÒÀÍÍÎÅ ×ÈÑËÎ ÎÒÏÐÀÂËßÅÌ ÎÁÐÀÒÍÎ ÃËÀÂÍÎÌÓ ÏÐÎÖÅÑÑÓ\n";
+		cout << "ÃÃÃŽÃ–Ã…Ã‘Ã‘ 3: ÃŽÃÃÃ€ÃÃŽÃ’Ã€ÃÃÃŽÃ… Ã—ÃˆÃ‘Ã‹ÃŽ ÃŽÃ’ÃÃÃ€Ã‚Ã‹ÃŸÃ…ÃŒ ÃŽÃÃÃ€Ã’ÃÃŽ ÃƒÃ‹Ã€Ã‚ÃÃŽÃŒÃ“ ÃÃÃŽÃ–Ã…Ã‘Ã‘Ã“\n";
 		WriteFile(m2, to_string(tmp).c_str(), strlen(to_string(tmp).c_str()), &n, NULL);
 		ReleaseSemaphore(s, 1, NULL);
 
